@@ -1,0 +1,6 @@
+[submodule "metagol"]
+	path = metagol
+	url = git@github.com:metagol/metagol.git
+[submodule "sources"]
+	path = sources
+	url = git@github.com:metagol/metagol_web_interface.git
