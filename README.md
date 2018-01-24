@@ -12,7 +12,7 @@ $dirName = "//srv//metagol//temp";
  
  # How to run
  ```
- docker-compose.exe up -d
+ docker-compose up -d
  docker cp .\sources\initDB.sql  metagolwebinterface_db_1:/
  docker exec -it  metagolwebinterface_web_1 sh
     mysql -u metagol -pmetagol metagolDB < initDB.sql
