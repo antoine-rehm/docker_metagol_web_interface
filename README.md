@@ -8,9 +8,13 @@ $constant['mysqlDB'] = "metagolDB";
 
 $execStr = "yap";
 
-$dirName = "//srv//metagol//temp";
+$dirName = "//srv//metagol//temp//";
  
 # How to run
+- Create temp folder in sources:
+```
+mkdir ./sources/temp
+```
 - Up docker:
 ```
 docker-compose up -d
