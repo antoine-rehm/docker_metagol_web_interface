@@ -10,10 +10,22 @@ $execStr = "yap";
 
 $dirName = "//srv//metagol//temp";
  
- # How to run
- ```
- docker-compose up -d
- docker cp .\sources\initDB.sql  metagolwebinterface_db_1:/
- docker exec -it  metagolwebinterface_web_1 sh
+# How to run
+- Up docker:
+```
+docker-compose up -d
+````
+- Copy sql init script to mariadb docker
+  linux:
+  ```
+  docker cp ./sources/initDB.sql  dockermetagolwebinterface_db_1:/
+  ```
+  windows:
+  ```
+  docker cp .\sources\initDB.sql  dockermetagolwebinterface_db_1:/
+  ```
+- Execute sh and execute sql initi script
+```
+docker exec -it  dockermetagolwebinterface_web_1 sh
     mysql -u metagol -pmetagol metagolDB < initDB.sql
 ```
